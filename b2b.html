@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>렌티업 - 스마트한 기업의 선택, B2B 대량 렌탈</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .spinner { animation: rotate 2s linear infinite; }
+        @keyframes rotate { 100% { transform: rotate(360deg); } }
+        /* 약관 내용 박스 애니메이션 */
+        #privacyContent.hidden { display: none; }
+    </style>
+</head>
+<body class="bg-white font-sans text-slate-800 selection:bg-teal-500 selection:text-white">
+
+    <header class="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-slate-900">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2069" alt="Office Background" class="w-full h-full object-cover opacity-30" />
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-900/80 to-slate-900"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-teal-500/20 border border-teal-400/30 text-teal-300 font-medium mb-8 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+                스타트업부터 대기업까지, 맞춤형 B2B 솔루션 렌티업
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+                스마트한 기업의 선택, <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-300">초기비용 ZERO 렌탈</span>
+            </h1>
+            <p class="text-xl text-slate-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                필요한 모든 업무 장비를 한 번에. 구매의 부담은 내리고, 관리의 효율은 극대화하세요.
+            </p>
+            <button onclick="scrollToContact()" class="px-10 py-4 bg-teal-600 hover:bg-teal-500 text-white rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-3 mx-auto shadow-lg shadow-teal-600/30 group">
+                맞춤 견적 받아보기 <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+            </button>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-slate-400">
+            <i class="fa-solid fa-chevron-down text-2xl"></i>
+        </div>
+    </header>
+
+    <section class="py-24 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-teal-600 uppercase mb-3">Core Competence</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900">왜 렌티업의 B2B 렌탈이어야 할까요?</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-1 transition-transform duration-300 text-center md:text-left">
+                    <div class="w-14 h-14 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center mb-6 text-2xl mx-auto md:mx-0"><i class="fa-solid fa-calculator"></i></div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">초기 자본금 세이브</h4>
+                    <p class="text-slate-500 leading-relaxed text-sm">목돈 들이지 않고, 월 소액의 렌탈료만으로 즉시 풀세팅이 가능합니다.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-1 transition-transform duration-300 text-center md:text-left">
+                    <div class="w-14 h-14 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center mb-6 text-2xl mx-auto md:mx-0"><i class="fa-solid fa-money-bill-wave"></i></div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">전액 비용(손비) 처리</h4>
+                    <p class="text-slate-500 leading-relaxed text-sm">매월 세금계산서 발행으로 법인세/소득세 절세 혜택을 누리세요.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-1 transition-transform duration-300 text-center md:text-left">
+                    <div class="w-14 h-14 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center mb-6 text-2xl mx-auto md:mx-0"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">부채비율 영향 無</h4>
+                    <p class="text-slate-500 leading-relaxed text-sm">금융 대출이 아니므로 신용등급 하락이나 부채비율 증가가 없습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-extrabold text-slate-900 mb-4">어떤 구매 방식이 가장 유리할까요?</h3>
+                <p class="text-slate-500">직접 구매, 금융 리스와 비교해보면 렌탈의 장점이 명확해집니다.</p>
+            </div>
+            <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
+                <table class="w-full min-w-[600px] text-center">
+                    <thead>
+                        <tr>
+                            <th class="py-5 px-6 bg-slate-50 border-b border-slate-200 font-bold text-slate-700">구분</th>
+                            <th class="py-5 px-6 bg-slate-50 border-b border-slate-200 font-bold text-slate-700">직접 구매</th>
+                            <th class="py-5 px-6 bg-teal-600 border-b border-teal-700 font-extrabold text-white">렌티업 B2B 렌탈</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr>
+                            <td class="py-4 px-6 font-semibold bg-slate-50">초기 비용</td>
+                            <td class="py-4 px-6">전액 일시불</td>
+                            <td class="py-4 px-6 font-bold text-teal-700 bg-teal-50/50">초기비용 ZERO</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6 font-semibold bg-slate-50">비용 처리</td>
+                            <td class="py-4 px-6">감가상각</td>
+                            <td class="py-4 px-6 font-bold text-teal-700 bg-teal-50/50">렌탈료 전액 처리</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-slate-900 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-extrabold text-white mb-4">성공적인 비즈니스의 시작, <br/>지금 바로 문의하세요.</h2>
+                <p class="text-teal-200 text-lg">최상의 조건으로 렌티업 맞춤 견적을 제안해 드립니다.</p>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl" id="formContainer">
+                <form id="contactForm" class="space-y-6">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_subject" value="[렌티업] 신규 B2B 렌탈 견적 신청건">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">회사명(상호) *</label>
+                            <input type="text" name="회사명" id="companyName" required class="w-full bg-slate-50 px-4 py-3.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-teal-500 outline-none" placeholder="주식회사 예시" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">담당자 성함 / 직급 *</label>
+                            <input type="text" name="담당자" id="managerName" required class="w-full bg-slate-50 px-4 py-3.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-teal-500 outline-none" placeholder="홍길동 대리" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">연락처 *</label>
+                            <input type="tel" name="연락처" id="phoneNum" required class="w-full bg-slate-50 px-4 py-3.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-teal-500 outline-none" placeholder="010-0000-0000" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">지역</label>
+                            <input type="text" name="지역" id="region" class="w-full bg-slate-50 px-4 py-3.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-teal-500 outline-none" placeholder="서울시 강남구" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">필요 제품 및 수량 / 문의사항 *</label>
+                        <textarea name="문의내용" id="inquiry" required rows="4" class="w-full bg-slate-50 px-4 py-3.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-teal-500 outline-none resize-none" placeholder="예: LG 그램 20대 견적 부탁드립니다."></textarea>
+                    </div>
+
+                    <div class="mt-6 border-t border-slate-100 pt-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-2">
+                                <input type="checkbox" id="privacyAgree" name="개인정보동의" required checked class="w-5 h-5 text-teal-600 border-slate-300 rounded focus:ring-teal-500 cursor-pointer">
+                                <label for="privacyAgree" class="text-sm font-medium text-slate-700 cursor-pointer">개인정보 수집 및 이용 동의 <span class="text-red-500">(필수)</span></label>
+                            </div>
+                            <button type="button" onclick="togglePrivacy()" class="text-xs text-slate-400 hover:text-teal-500 underline">내용보기 <i class="fa-solid fa-chevron-down ml-1"></i></button>
+                        </div>
+                        <div id="privacyContent" class="hidden mt-3 text-[11px] leading-relaxed text-slate-500 bg-slate-50 p-4 rounded-xl border border-slate-200 h-32 overflow-y-auto">
+                            <p class="font-bold mb-1">[개인정보 수집 및 이용 안내]</p>
+                            <p>1. 수집 항목: 회사명, 담당자 성함, 연락처, 지역, 문의내용</p>
+                            <p>2. 이용 목적: B2B 렌탈 상담 및 맞춤 견적 제공</p>
+                            <p><strong>3. 보유 기간: 상담 완료 후 6개월 (이후 즉시 파기)</strong></p>
+                            <hr class="my-2">
+                            <p><strong>책임자: 전영주 (sbo20130@naver.com) / 와이렌탈</strong></p>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="w-full py-6 rounded-2xl text-white font-extrabold text-2xl bg-slate-900 hover:bg-slate-800 shadow-xl transition-all"> 무료 견적 신청하기
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-16 text-slate-400 text-sm text-center md:text-left">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-10">
+            <div>
+                <h2 class="text-white font-extrabold text-2xl mb-4">와이렌탈 <span class="text-slate-500 text-base font-normal">렌티업</span></h2>
+                <p>사업자등록번호: 803-29-01578 | 대표: 전영주</p>
+                <p>통신판매업신고번호: 제 2025-경기송탄-0495호</p>
+                <p>주소: 대전 유성구 유성대로 789 501호</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end gap-2">
+                <span class="text-xl font-bold text-white"><i class="fa-solid fa-phone"></i> 1661-5534</span>
+                <span>sbo20130@naver.com</span>
+                <p>개인정보보호책임자: 전영주</p>
+                <div class="text-xs text-slate-600 mt-4">© 2024 와이렌탈. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <button onclick="scrollToContact()" class="fixed bottom-6 right-6 z-50 bg-[#1a3d3c] text-white w-20 h-20 rounded-2xl shadow-2xl flex items-center justify-center font-bold text-lg border border-white/10">문의<br/>하기</button> <script>
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 개인정보 토글 함수
+        function togglePrivacy() {
+            const content = document.getElementById('privacyContent');
+            content.classList.toggle('hidden');
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner spinner"></i> 신청 중...';
+
+            const formData = {
+                회사명: document.getElementById('companyName').value,
+                담당자: document.getElementById('managerName').value,
+                연락처: document.getElementById('phoneNum').value,
+                지역: document.getElementById('region').value,
+                문의내용: document.getElementById('inquiry').value,
+                _subject: document.querySelector('input[name="_subject"]').value
+            };
+
+            fetch("https://formsubmit.co/ajax/sbo20130@naver.com", {
+                method: "POST",
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            })
+            .then(res => {
+                if(res.ok) {
+                    document.getElementById('formContainer').innerHTML = `
+                        <div class="text-center py-16">
+                            <i class="fa-solid fa-circle-check text-5xl text-teal-500 mb-6"></i>
+                            <h3 class="text-2xl font-bold mb-2">신청이 완료되었습니다!</h3>
+                            <p class="text-slate-600 mb-8">담당자가 신속히 연락드리겠습니다.</p>
+                            <button onclick="location.reload()" class="text-teal-600 font-semibold underline">새로고침</button>
+                        </div>`;
+                }
+            })
+            .catch(() => alert("오류가 발생했습니다."));
+        });
+    </script>
+</body>
+</html>
