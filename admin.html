@@ -187,7 +187,7 @@
 <script>
     const SUPABASE_URL = "https://nhyehgknkwwhebtprwzo.supabase.co";
     const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5oeWVoZ2tua3d3aGVidHByd3pvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM1ODIyOTMsImV4cCI6MjA4OTE1ODI5M30.pfAcmyCDhSREXaIwlOy3RmqGfpmkBK1SiKN12ay8Ss0";
-    const ADMIN_PW = "dud@wnwkwkdauS12";
+    const ADMIN_PW = "fpsxmdls11@";
 
     function doLogin() {
         const pw = document.getElementById('pwInput').value;
@@ -292,7 +292,7 @@
         document.getElementById('tabPreview').innerHTML = `
             <div class="contract-preview" id="contractPreviewContent">
                 <h1>파트너 업무 위탁 계약서</h1>
-                <p><strong>(주)정수기마켓</strong>과 아래 인적사항의 <strong>파트너</strong>는 상호 매출 증대를 도모하기 위하여 다음과 같이 파트너 계약을 체결한다.</p>
+                <p><strong>(주)와이렌탈</strong>과 아래 인적사항의 <strong>파트너</strong>는 상호 매출 증대를 도모하기 위하여 다음과 같이 파트너 계약을 체결한다.</p>
                 <h2>[파트너 정보 (갑)]</h2>
                 <table class="preview-table">
                     ${c.partner_type==='business' ? `<tr><th>상호명</th><td>${c.biz_name||'-'}</td></tr><tr><th>사업자등록번호</th><td>${c.biz_num||'-'}</td></tr>` : `<tr><th>주민등록번호</th><td>${c.resident_num||'-'}</td></tr>`}
@@ -303,10 +303,10 @@
                 </table>
                 <h2>[본사 정보 (을)]</h2>
                 <table class="preview-table">
-                    <tr><th>상호(법인명)</th><td>(주)정수기마켓</td></tr>
-                    <tr><th>사업자등록번호</th><td>574-86-03026</td></tr>
-                    <tr><th>주소</th><td>대전광역시 유성구 유성대로 789 501호</td></tr>
-                    <tr><th>대표자</th><td><div style="display:flex;align-items:center;gap:5px">김효상 (인)<img src="https://raw.githubusercontent.com/a01059651000-creator/rentin/main/%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%20%EC%A0%95%EC%88%98%EA%B8%B0%EB%A7%88%EC%BC%93_%EB%8F%84%EC%9E%A5.png" style="width:48px;height:48px"></div></td></tr>
+                    <tr><th>상호(법인명)</th><td>(주)와이렌탈</td></tr>
+                    <tr><th>사업자등록번호</th><td>803-29-01578</td></tr>
+                    <tr><th>주소</th><td>평택시 고덕국제2로 45 603호</td></tr>
+                    <tr><th>대표자</th><td><div style="display:flex;align-items:center;gap:5px">전영주 (인) <span style="font-family:cursive;font-size:20px;color:#1a3c5e;border-bottom:2px solid #1a3c5e;padding:0 6px">전영주</span></div></td></tr>
                 </table>
                 <h2>제 1 조 ~ 제 10 조</h2>
                 <p>계약 목적, 수수료 정산(익월 말일), ${c.partner_type==='individual'?'원천세 13.3% 공제':'부가세 10% 포함 정산'}, 분양몰 구축비 300,000원(VAT별도), 수수료 환수, 개인정보 보호, 계약기간(1년 자동연장), 해지, 비밀유지, 관할법원(을 소재지) 등 제반 조항 적용.</p>
